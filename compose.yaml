@@ -1,0 +1,19 @@
+version: '3.9'
+
+networks:
+  traefik:
+    name: traefik
+    external: true
+
+services:
+  cyberchef:
+    container_name: cyberchef
+    restart: unless-stopped
+    image: ghcr.io/gchq/cyberchef:latest
+    networks:
+      traefik:
+    expose:
+    - 80
+    labels:
+      traefik.enable: true
+      traefik.http.routers.cyberchef.tls: true
