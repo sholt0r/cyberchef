@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     image: ghcr.io/gchq/cyberchef:latest
     networks:
-      traefik:
+      - traefik
     expose:
     - 80
     labels:
