@@ -11,7 +11,7 @@ services:
     networks:
       - traefik
     expose:
-    - 80
+      - 80
     labels:
       traefik.enable: true
       traefik.http.routers.cyberchef.tls: true
